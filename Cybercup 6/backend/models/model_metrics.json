@@ -1,0 +1,384 @@
+{
+  "dataset_summary": {
+    "total_transactions": 25000,
+    "train_size": 18750,
+    "test_size": 6250,
+    "fraud_ratio": 0.1607,
+    "scam_breakdown": {
+      "None": 20983,
+      "Collect_Refund_Scam": 1275,
+      "QR_Tamper_Scam": 1063,
+      "Screenshare_RAT_Scam": 805,
+      "Mule_Velocity_Scam": 475,
+      "Phishing_Bill_Scam": 285,
+      "Zero_Day_Scam": 114
+    }
+  },
+  "model_performance": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "fpr": 0.0,
+    "roc_auc": 1.0,
+    "accuracy": 1.0
+  },
+  "confusion_matrix": {
+    "tp": 1004,
+    "fp": 0,
+    "tn": 5246,
+    "fn": 0
+  },
+  "latency_benchmarks_ms": {
+    "avg": 27.31,
+    "p50": 27.94,
+    "p95": 31.58,
+    "p99": 34.45,
+    "npci_sla_threshold_ms": 120.0
+  },
+  "feature_importances": {
+    "ratio_amount_to_avg": 0.36067112617891095,
+    "amount": 0.11599700081312138,
+    "is_mule_cluster": 0.11408575409194693,
+    "msg_urgency_score": 0.10282132431174039,
+    "velocity_1h": 0.09135816717558817,
+    "payee_txn_count": 0.06298205506770505,
+    "qr_payload_tampered": 0.038685817031470324,
+    "is_new_payee": 0.02787250219607506,
+    "msg_has_refund_cashback": 0.024669442199953307,
+    "velocity_24h": 0.02340006355483011,
+    "pasted_vpa": 0.02165458774564568,
+    "active_phone_call": 0.006862226920616814,
+    "late_night_hour": 0.0033349637324087975,
+    "active_screenshare": 0.0022315312384359512,
+    "type_debit": 0.0011605850548698396,
+    "type_collect": 0.000955495896551002,
+    "device_rooted": 0.0006290041468729123,
+    "type_qr_scan": 0.0006283526432573853
+  },
+  "feature_names": [
+    "amount",
+    "is_new_payee",
+    "payee_txn_count",
+    "pasted_vpa",
+    "active_screenshare",
+    "active_phone_call",
+    "device_rooted",
+    "late_night_hour",
+    "velocity_1h",
+    "velocity_24h",
+    "ratio_amount_to_avg",
+    "msg_has_refund_cashback",
+    "msg_urgency_score",
+    "qr_payload_tampered",
+    "is_mule_cluster",
+    "type_collect",
+    "type_debit",
+    "type_qr_scan"
+  ],
+  "curves": {
+    "roc_points": [
+      {
+        "fpr": 0.0,
+        "tpr": 0.0
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.945
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.946
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.95
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.951
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.955
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.956
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.96
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.961
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.972
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.973
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.975
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.977
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.979
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.992
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.994
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.996
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 0.998
+      },
+      {
+        "fpr": 0.0,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.003,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.003,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.004,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.005,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.006,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.008,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.008,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.009,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.009,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.01,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.01,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.011,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.016,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.016,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.016,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.017,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.018,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.018,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.018,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.019,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.019,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.021,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.021,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.038,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.041,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.042,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 0.068,
+        "tpr": 1.0
+      },
+      {
+        "fpr": 1.0,
+        "tpr": 1.0
+      }
+    ],
+    "pr_points": [
+      {
+        "recall": 1.0,
+        "precision": 0.161
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.824
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.901
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.912
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.919
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.924
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.953
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.956
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.961
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.973
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.98
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.983
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.987
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.99
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.993
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.996
+      },
+      {
+        "recall": 1.0,
+        "precision": 0.999
+      },
+      {
+        "recall": 0.998,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.994,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.99,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.987,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.984,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.981,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.977,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.973,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.96,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.951,
+        "precision": 1.0
+      },
+      {
+        "recall": 0.946,
+        "precision": 1.0
+      }
+    ]
+  }
+}
