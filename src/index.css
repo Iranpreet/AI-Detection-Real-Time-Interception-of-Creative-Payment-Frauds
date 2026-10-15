@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0b0e14;
+  color: #f1f5f9;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum" 1;
+}
+
+/* Warm Charcoal & Golden Amber Studio Ambient Lighting */
+.cyera-bg {
+  background-color: #0b0e14;
+  background-image: 
+    radial-gradient(ellipse 85% 55% at 50% -20%, rgba(245, 158, 11, 0.15), transparent 70%),
+    radial-gradient(ellipse 65% 45% at 88% 55%, rgba(217, 119, 6, 0.12), transparent 60%),
+    radial-gradient(ellipse 55% 55% at 12% 80%, rgba(16, 185, 129, 0.08), transparent 50%),
+    radial-gradient(ellipse 40% 30% at 50% 100%, rgba(251, 191, 36, 0.06), transparent 50%);
+}
+
+.light .cyera-bg {
+  background-color: #faf9f6;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(245, 158, 11, 0.10), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 85% 60%, rgba(217, 119, 6, 0.07), transparent 60%);
+}
+
+/* Cozy Warm Dark Slate Panels with Golden Backlight */
+.cyera-panel {
+  background: rgba(16, 20, 28, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(251, 191, 36, 0.12);
+}
+
+.light .cyera-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow: 0 10px 40px -10px rgba(217, 119, 6, 0.08);
+}
+
+/* Warm Golden Glow Effects (matching studio lamp & shelf lighting) */
+.glow-amber {
+  box-shadow: 0 0 45px -8px rgba(245, 158, 11, 0.40);
+}
+
+.glow-gold {
+  box-shadow: 0 0 50px -5px rgba(251, 191, 36, 0.45);
+}
+
+.glow-crimson {
+  box-shadow: 0 0 50px -5px rgba(239, 68, 68, 0.40);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.35);
+}
+
+/* Warm Golden Radar Sweep */
+@keyframes radar-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar-sweep {
+  animation: radar-spin 6s linear infinite;
+  background: conic-gradient(from 0deg, transparent 0deg, transparent 270deg, rgba(245, 158, 11, 0.30) 360deg);
+}
+
+/* Pulse Beacon */
+@keyframes cyera-pulse {
+  0% { transform: scale(0.95); opacity: 0.9; }
+  50% { transform: scale(1.15); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.9; }
+}
+
+.animate-cyera-beacon {
+  animation: cyera-pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbars with warm amber tone */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.50);
+}
+
+/* Mission Briefing Cinematic Keyframes */
+@keyframes cyera-orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-orbit {
+  animation: cyera-orbit 20s linear infinite;
+}
+
+@keyframes cyera-counter-orbit {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-counter-orbit {
+  animation: cyera-counter-orbit 14s linear infinite;
+}
+
+@keyframes scan-beam {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(1000%); opacity: 0; }
+}
+
+.animate-scan-beam {
+  animation: scan-beam 4s ease-in-out infinite;
+}
